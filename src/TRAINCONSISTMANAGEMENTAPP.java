@@ -2,21 +2,22 @@ import java.util.*;
 public class TRAINCONSISTMANAGEMENTAPP {
     public static void main (String args[]){
         System.out.println("==========================================");
-        System.out.println("   UC3 - Add Passenger Bogie IDs  ");
+        System.out.println("   UC4 - Maintain Ordered Bogie Consist  ");
         System.out.println("==========================================");
-        Set <String> bogies = new HashSet<>();
-        bogies.add("BG101");
-        bogies.add("BG102");
-        bogies.add("BG103");
-        bogies.add("BG104");
-        bogies.add("BG101");
-        bogies.add("BG102");
-        System.out.println("Bogie IDs After Insertion:"+bogies);
+        List<String> trainConsist = new LinkedList<>();
+        trainConsist.add("Engine");
+        trainConsist.add("Sleeper");
+        trainConsist.add("AC");
+        trainConsist.add("Cargo");
+        trainConsist.add("Guard");
+        System.out.println("Initial Train Consist:"+ trainConsist);
+        trainConsist.add(2,"Pantry Car");
+        System.out.println("After Inserting 'Pantry Car' at position 2:"+ trainConsist);
+        trainConsist.removeFirst();
+        trainConsist.removeLast();
+        System.out.println("After removing First and Last Bogie:"+trainConsist);
         System.out.println();
-        System.out.println("Note:");
-        System.out.println("Duplicate are automatically ignored by HashSet.");
-        System.out.println();
-        System.out.println("UC3 uniqueness validation completed...");
+        System.out.println("UC4 ordered consist operation completed...");
 
 
     }
